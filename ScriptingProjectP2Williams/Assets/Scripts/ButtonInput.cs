@@ -1,8 +1,8 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
 
-public class KeyInput : MonoBehaviour
+public class ButtonInput : MonoBehaviour
 {
     public Image graphic;
     public Sprite standard;
@@ -20,9 +20,9 @@ public class KeyInput : MonoBehaviour
 
     void Update()
     {
-        bool down = Input.GetKeyDown(KeyCode.Space);
-        bool held = Input.GetKey(KeyCode.Space);
-        bool up = Input.GetKeyUp(KeyCode.Space);
+        bool down = Input.GetButtonDown("Jump");
+        bool held = Input.GetButton("Jump");
+        bool up = Input.GetButtonUp("Jump");
 
         if (down)
         {
